@@ -6,3 +6,15 @@ to do:
     - add port doc
     - add arm platform
     - fullfill ezos
+
+environment:
+    1. qemu
+    2. riscv toolchain, you can use https://download.nucleisys.com/upload/files/toolchain/gcc/nuclei_riscv_newlibc_prebuilt_linux64_2024.06.tar.bz2
+    3. cmake & make
+
+usage:
+    1. type  ./build.sh, choose which cmd, which rtos, which target
+    2. use run, for example: build with ./build.sh build riscv freertos, run with ./build.sh run riscv freertos
+    3. use gdb, for example: build with ./build.sh build riscv freertos, run with ./build.sh gdb riscv freertos, open another terminal, then type riscv64-unknown-elf-gdb out/multi_rtos.out.
+       In gdb command, type tar rem:1234, then type load & c to run
+
